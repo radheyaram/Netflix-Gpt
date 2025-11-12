@@ -8,14 +8,11 @@ const SearchBar = () => {
   const { lang } = changeLang;
   const gpthandler = async () => {
     const userInput = inputRef.current.value.trim();
-    console.log(userInput);
     try {
       const respone = await axios.post(
         "http://localhost:777/browser/search/movies",
         { userInput }
       );
-      console.log(respone?.data?.movies);
-      console.log(respone?.data?.gptMovies);
       setTmbdMovies(respone?.data?.movies || []);
       setGptMovies(respone?.data?.gptMovies || []);
     } catch (err) {
