@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
 export const GPT_URL = process.env.GPT_URL;
-dotenv.config();
 export const models = [
   "google/gemma-3n-e4b-it:free",
   "nvidia/nemotron-nano-12b-v2-vl:free",
